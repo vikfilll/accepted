@@ -14,7 +14,7 @@ void solve() {
     b = a;
     sort(b.begin(), b.end());
     for (int i = 0; i < n; ++i) {
-        if (gcd(a[i], b[0]) != b[0] && a[i] != b[i]) {
+        if (a[i] != b[i] && gcd(a[i], b[0]) != b[0]) {
             cout << "NO\n";
             return;
         }
