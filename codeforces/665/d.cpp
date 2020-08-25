@@ -10,9 +10,9 @@ vector <long long> res;
  
 int dfs(int v, int pr) {
     int sz = 1;
-    for (int i : g[v]) {
-        if (pr == i) continue;
-        int szL = dfs(i, v);
+    for (int u : g[v]) {
+        if (pr == u) continue;
+        int szL = dfs(u, v);
         res.push_back(1LL * szL * (n - szL));
         sz += szL;
     }
